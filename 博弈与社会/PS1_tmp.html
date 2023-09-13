@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PS1.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%E4%BD%9C%E4%B8%9A1">作业1</h1>
+<h2 id="%E9%A2%981">题1：</h2>
+<ol>
+<li>重复剔除：</li>
+</ol>
+<ul>
+<li>对于甲，无论乙选择什么，甲选择D的收益总是小于U和M，故删去甲的D选择：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>l</th>
+<th>m</th>
+<th>n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>U</td>
+<td>2,0</td>
+<td>1,0</td>
+<td>4,2</td>
+</tr>
+<tr>
+<td>M</td>
+<td>3,4</td>
+<td>1,2</td>
+<td>2,3</td>
+</tr>
+<tr>
+<td>D</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>接着，乙的m策略严格劣于l和n，剔除m</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>l</th>
+<th>m</th>
+<th>n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>U</td>
+<td>2,0</td>
+<td></td>
+<td>4,2</td>
+</tr>
+<tr>
+<td>M</td>
+<td>3,4</td>
+<td></td>
+<td>2,3</td>
+</tr>
+<tr>
+<td>D</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>无法再简化，即为结果</li>
+</ul>
+<ol start="2">
+<li>纯战略纳什均衡</li>
+</ol>
+<ul>
+<li>纯战略纳什均衡必然是在重复剔除的结果中的，则比较发现只有(M,l)对应的结果(3,4)是符合纳什均衡条件的。</li>
+</ul>
+<ol start="3">
+<li>混合战略纳什均衡</li>
+</ol>
+<ul>
+<li>假设甲选U的概率是$p$,则选择M为$1-p$;同理，乙选l的概率为$q$,选n为$1-q$</li>
+<li>可以列出甲的期望收益：$$2pq+3(1-p)q+4p(1-q)+2(1-p)(1-q)=2+2p+q-3pq $$</li>
+<li>乙的期望收益：$$4(1-p)q+2p(1-q)+3(1-p)(1-q)=3-1p+q-3pq $$</li>
+<li>要求使得甲的收益对p是最优的，乙的收益对q是最优的，故分别对p,q求导：
+$$
+\begin{aligned}
+&amp;2-3q=0 \
+&amp;1-3p=0 \
+\Rightarrow \ &amp;q=2/3 \ ,\ p=1/3  \
+\end{aligned}
+$$</li>
+<li>故甲乙在$q=2/3 \ ,\ p=1/3 \space$下的策略组合是应该混合战略纳什均衡
+ps. 我们发现这里甲期望收益对p线性，其均衡条件与p无关，乙类似，说明纳什均衡的形成条件——极值，导数为0，与另一个人的战略有关而与自己的选择无关，这说明纳什均衡只会出现在使得线性函数水平的策略组合中或出现在定义域端点（纯策略）。</li>
+</ul>
+<p>##题2：</p>
+<ul>
+<li>价格函数：$$P(Q)=a-Q=a-q_1-q_2$$</li>
+<li>成本：
+$$
+\begin{aligned}
+c(q_1)&amp;=c_1<em>q_1 \
+c(q_2)&amp;=c_2</em>q_2 \
+\end{aligned}
+$$</li>
+<li>净利润达到均衡，即导数分别为0：
+$$
+\begin{alignat*}{2}
+&amp;&amp;s(q_1)&amp;=(a-q_1-q_2)<em>q_1-c_1</em>q_1 \
+&amp;&amp;&amp;=-q_1^2+(a-q_2-c_1)q_1 \
+&amp;&amp;s(q_2)&amp;=(a-q_1-q_2)<em>q_2-c_2</em>q_2 \
+&amp;&amp;&amp;=-q_2^2+(a-q_1-c_2)q_2 \
+&amp;\Rightarrow &amp; 2q_1&amp;=a-q_2-c_1 \
+&amp;&amp;2q_2&amp;=a-q_1-c_2 \
+&amp;\Rightarrow &amp;q_1&amp;=a/3-2/3c_1+c_2/3 \
+&amp;&amp;q_2&amp;=a/3-2/3c_2+c_1/3
+\end{alignat*}
+$$
+此即纳什均衡。</li>
+</ul>
+<p>##题3：
+1.</p>
+<ul>
+<li>本题的纳什均衡是(坦白，坦白)（-5，-5）；</li>
+<li>但帕累托最优的结果应当是(不坦白，不坦白)（-1，-1）</li>
+</ul>
+<ol start="2">
+<li>则需要改写收益表</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>坦白</th>
+<th>不坦白</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>坦白</td>
+<td>-5-5r,-5-5r</td>
+<td>-8r,-8</td>
+</tr>
+<tr>
+<td>不坦白</td>
+<td>-8,-8r</td>
+<td>-1-r,-1-r</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>可以看到要使(不坦白，不坦白)成为纳什均衡，需要$-8r&lt;-1-r$,即$r&gt;1/7$；</li>
+<li>另一方面使得(坦白，坦白)不再是纳什均衡，需要$-8&gt;-5-5r$,即$r&gt;3/5$；</li>
+<li>我们取更严苛的，即$r&gt;3/5$，让双方走出囚徒困境，转为合作。</li>
+</ul>
+<ol start="3">
+<li>ACD</li>
+</ol>
+<p>##题4：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>5,5</td>
+<td>10,0</td>
+<td>10,0</td>
+<td>10,0</td>
+<td>10,0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0,10</td>
+<td>5,5</td>
+<td>10,0</td>
+<td>10,0</td>
+<td>10,0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0,10</td>
+<td>0,10</td>
+<td>5,5</td>
+<td>10,0</td>
+<td>10,0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0,10</td>
+<td>0,10</td>
+<td>0,10</td>
+<td>5,5</td>
+<td>10,0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0,10</td>
+<td>0,10</td>
+<td>0,10</td>
+<td>0,10</td>
+<td>5,5</td>
+</tr>
+</tbody>
+</table>
+<p>从数学上可以证明，该规则完全等价于：更小的人取得10&amp;相同平分10；</p>
+<ol>
+<li>出4是被严格占有的，甲（或乙）出4都是严格劣于出0的，所以可以抛去最下行和最右列；</li>
+<li>延用上一问的剔除，得到一个m=3的博弈情形，而这个过程是类似成立的，即对任意的m取值，所有m选择都是严格劣于0选择的。因此，我们可以归纳的将所有m&gt;0的选择都剔除掉，则只剩一个策略组合(0,0)为纯策略纳什均衡。</li>
+<li>即第二问描述的情况，任意m取值下，所有的m策略都是严格劣于0策略的。因此对于任意的m，都会被递归的剔除直到只剩一个策略组合(0,0)为纯策略纳什均衡。</li>
+</ol>
+
+</body>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
+
+</html>

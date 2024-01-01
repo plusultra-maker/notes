@@ -40,3 +40,8 @@
   - Chernoff bound
 - what if we only have X's expectation, x in [0,1], ex=p
 - more, many x in different ex=p_i p_i's E=p,how?
+
+# L3 Concentration Inequalities cont.
+- x in different ex=p_i p_i's E=p
+  - 独立，但不同分布,不能直接写成n次方
+  - $E(e^{t\Sigma(X_i)}) = \prod_{i=1}^n E(e^{tX_i})$ 由于Jensen不等式，这个值一定小于等于$E(e^{tX_i})^n$

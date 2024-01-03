@@ -59,4 +59,8 @@
 # L3
 - more on Chernoff bound
   - independent, $x_i \in [0,1]$, $E[x_i]=p_i$, 有 $\Sigma p_i=p$
-    - 
+    - use Jansen's inequality, the same as Chernoff bound
+  - additive Chernoff bound
+    - 改写为 $$P(\frac{1}{n}\sum_{i=1}^n X_i - p \geq \epsilon) \leq e^{-nD_{KL}(p+\epsilon||p)} \leq e^{-2n \epsilon^2}$$
+    - 这样与p无关，是一个广泛的性质
+- 随机变量的Concentration究竟是如何发生的，其程度与什么相关

@@ -63,4 +63,7 @@
   - additive Chernoff bound
     - 改写为 $$P(\frac{1}{n}\sum_{i=1}^n X_i - p \geq \epsilon) \leq e^{-nD_{KL}(p+\epsilon||p)} \leq e^{-2n \epsilon^2}$$
     - 这样与p无关，是一个广泛的性质
-- 随机变量的Concentration究竟是如何发生的，其程度与什么相关
+- 随机变量的Concentration究竟是如何发生的，其程度与什么相关——尾部收敛速度
+- Hoeffding Ineq:
+  - 对于多个随机变量，独立，其只需满足对于每个随机变量$X_i$，其取值范围在$[a_i,b_i]$之间，即可得到其平均值的Concentration Inequality
+  - $$P(|\frac{1}{n}\sum_{i=1}^n X_i - \mu| \geq \epsilon) \leq e^{\frac{-2n^2\epsilon^2 }{\sum_i(b_i-a_i)^2}}$$

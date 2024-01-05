@@ -63,7 +63,17 @@
   - additive Chernoff bound
     - 改写为 $$P(\frac{1}{n}\sum_{i=1}^n X_i - p \geq \epsilon) \leq e^{-nD_{KL}(p+\epsilon||p)} \leq e^{-2n \epsilon^2}$$
     - 这样与p无关，是一个广泛的性质
-- 随机变量的Concentration究竟是如何发生的，其程度与什么相关——尾部收敛速度
-- Hoeffding Ineq:
-  - 对于多个随机变量，独立，其只需满足对于每个随机变量$X_i$，其取值范围在$[a_i,b_i]$之间，即可得到其平均值的Concentration Inequality
-  - $$P(|\frac{1}{n}\sum_{i=1}^n X_i - \mu| \geq \epsilon) \leq e^{\frac{-2n^2\epsilon^2 }{\sum_i(b_i-a_i)^2}}$$
+  - 随机变量的Concentration究竟是如何发生的，其程度与什么相关——尾部收敛速度
+  - Hoeffding Ineq:
+    - 对于多个随机变量，独立，其只需满足对于每个随机变量$X_i$，其取值范围在$[a_i,b_i]$之间，即可得到其平均值的Concentration Inequality
+    - $$P(|\frac{1}{n}\sum_{i=1}^n X_i - \mu| \geq \epsilon) \leq e^{\frac{-2n^2\epsilon^2 }{\sum_i(b_i-a_i)^2}}$$
+    - 说明只需要有界而不需要其具体分布，就可以表现出一定的concentration
+- Draw with/without replacement
+  - Setting:
+    - Assume $a_1,a_2,...,a_N \in [0,1]$
+    - Randomly draw $X_1,X_2,...,X_n$ from $a_1,a_2,...,a_N$
+  - with replacement  
+    - 每次draw是完全一样的，X_i是独立且同分布的Bernoulli随机变量，其p就是$a_i$中1的比例，由前述有concentration
+  - without replacement
+    - 直观的想，without 会使结果更加concentrated，因为每次draw都会明确使得剩下的a_i的比例朝已知的方向变化，即降低了不确定性
+    - 

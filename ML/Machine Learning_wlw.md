@@ -76,4 +76,14 @@
     - 每次draw是完全一样的，X_i是独立且同分布的Bernoulli随机变量，其p就是$a_i$中1的比例，由前述有concentration
   - without replacement
     - 直观的想，without 会使结果更加concentrated，因为每次draw都会明确使得剩下的a_i的比例朝已知的方向变化，即降低了不确定性
-    - 
+  - 计算：
+    - 记$X_i$为第i次draw with的结果，$Y_i$为第i次draw without的结果
+    - 则证明$Y_i$更加concentrated，只需证明 
+    - $$对于任意t有E[e^{t\Sigma Y_i}] \leq E[e^{t\Sigma X_i}] $$ 
+    - 对$t$做taylor expansion:
+      $$ E[e^{t\Sigma X_i}] = 1+t*E[\Sigma X_i]+t^2*E[\Sigma_{ij} X_iX_j]+...$$
+      $$ E[e^{t\Sigma Y_i}] = 1+t*E[\Sigma Y_i]+t^2*E[\Sigma_{ij} Y_iY_j]+...$$
+    - 对于0阶和1阶，显然相等（不涉及相关性）
+    - 对于2阶以上，如二阶，$E[\Sigma_{ij} Y_iY_j]$即$Y_i=1,Y_j=1$的概率，而由于without replacement，出现一个1后，下一个1的概率就会降低，所以$E[\Sigma_{ij} Y_iY_j] \leq E[\Sigma_{ij} X_iX_j]$，更高阶是类似的
+    - 因此，$E[e^{t\Sigma Y_i}] \leq E[e^{t\Sigma X_i}]$，即without replacement更加concentrated
+    - 在之后Generation中有用

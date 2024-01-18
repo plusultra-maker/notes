@@ -9,3 +9,27 @@
   - different from network layer
     - network layer: logical communication between hosts
     - transport layer relies on network layer, that makes it possible to focus on processe s within hosts
+- multiplexing/demultiplexing
+  - multiplexing: handle data from multiple sockets, add transport header, pass to network layer
+  - demultiplexing: use header info to deliver received segments to correct socket
+  - the key is about multiple sockets, we need segment header to identify which socket (app) it belongs to
+  - UDP-port 
+    - just add source/destination port number to segment header
+    - local seed to the server, the server send the response back to the same port (but the source/destination port number are reversed)
+    - the server can handle multiple clients by and only by using different ports
+  - TCP socket
+    - identified by 4-tuple: source IP, source port, dest IP, dest port
+    - each socket associated with a different connecting client
+    - but sockets can use the same port number( eg. 80 for HTTP) , and demultiplexing is done by the 4-tuple to the correct socket (or say the TCP-connection)
+- Connectionless transport:UDP
+  - simple, bare bone
+    - best effort service: lost , out of order
+    - no handshaking between UDP sender, receiver, no connection state at all, low RTT
+    - each UDP segment handled independently of others 
+    - no congestion control: UDP can blast away as fast as desired
+      - good for streaming multimedia apps  
+      - DNS, SNMP
+      - online games
+      - can be fixed by application layer (HTTP/3 )
+  - sender actions
+    - 

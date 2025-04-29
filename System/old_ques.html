@@ -1,0 +1,442 @@
+<!DOCTYPE html><html><head>
+      <title>old_ques</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\maverick\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.18\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+      body {
+            column-count: 6;
+            column-gap: 1cm;
+            font-size: 10pt;
+            line-height: 1.4;
+      }
+      
+      h1, h2, h3, p, ol, ul, table {
+            grid-column: span 6; /* Ensure content spans all six columns */
+      }
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="往年题">往年题 </h1>
+<h1 id="2018-秋-期中">2018 秋-期中 </h1>
+<h2 id="一-关于-cpu-状态-8-分">一、关于 CPU 状态 (8 分) </h2>
+<ol>
+<li>
+<p><strong>为什么要将指令集合划分为不同的特权级别？</strong><br>
+答：将指令集划分为不同特权级别是为了保护系统安全和稳定运行。高特权级（内核态）执行关键操作，低特权级（用户态）执行普通应用程序，防止用户程序直接访问硬件资源或执行危险操作，避免系统崩溃和安全漏洞。</p>
+</li>
+<li>
+<p><strong>下列指令哪些指令只能在内核态（管态）下执行？（请在你要选择的指令上划勾）</strong><br>
+算术运算、内存读写、读日期时间、✅ 启动 I/O、✅ 修改程序状态字、访管指令、陷入指令（如 sysenter）、✅ 允许/禁止中断、取数指令<br>
+答：只能在内核态下执行的指令：启动 I/O、修改程序状态字、允许/禁止中断。</p>
+</li>
+</ol>
+<hr>
+<h2 id="二-关于中断-异常和系统调用-15-分">二、关于中断、异常和系统调用 (15 分) </h2>
+<ol>
+<li>
+<p><strong>在实现系统调用时，需要硬件体系结构提供哪些支持？在操作系统中应完成哪些工作？请以 IA32 体系结构为例，描述执行系统调用时硬件和软件的工作流程。</strong><br>
+中断描述符格式：<br>
+<code>| 段选择符(高16位) | DPL | P | 门类型 | D00 | 空闲 | 段选择符 | 段内偏移(低16位) |</code></p>
+<ul>
+<li>IDTR -&gt; IDT</li>
+<li>GDTR -&gt; GDT</li>
+</ul>
+<p>段描述符格式：<br>
+<code>| 段基址 | 段界限 | 属性(包括 DPL) | 段基址 |</code></p>
+<p>答：</p>
+<ul>
+<li><strong>硬件支持</strong>：特权级机制、中断门机制、寄存器保存现场。IA32 提供特殊指令（如 <code>int</code>、<code>sysenter</code>）、IDT 和 GDT 表、特权级切换机制。</li>
+<li><strong>操作系统工作</strong>：系统调用表维护、参数传递接口、内核态处理逻辑实现。</li>
+<li><strong>工作流程</strong>：用户程序将系统调用号放入 EAX，参数放入其他寄存器（EBX/ECX/EDX 等），执行 <code>int 0x80</code> 指令；CPU 检查特权级，切换到内核态，保存现场；根据 IDTR 找到 IDT，根据中断号找到对应处理程序；系统调用处理程序从 EAX 获取调用号，从寄存器获取参数；执行内核服务；返回用户态，通过 EAX 返回结果。</li>
+</ul>
+</li>
+<li>
+<p><strong>系统调用与函数调用有什么区别？系统调用与 API 是什么关系？</strong><br>
+答：</p>
+<ul>
+<li><strong>区别</strong>：系统调用涉及特权级切换（用户态 → 内核态），函数调用在同一特权级；系统调用使用特殊指令（如 <code>int 0x80</code>），函数调用使用 <code>call</code> 指令；系统调用开销较大，需保存更多现场信息。</li>
+<li><strong>关系</strong>：API 是应用程序编程接口，为应用程序提供标准化功能；系统调用是操作系统内核提供的服务；API 通常封装了系统调用，提供更友好的接口，一个 API 可能涉及多个系统调用。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="三-关于进程线程模型-18-分">三、关于进程线程模型 (18 分) </h2>
+<ol>
+<li>
+<p><strong>进程控制块（PCB）的作用是什么？它与进程控制操作（创建、撤销、阻塞、唤醒）、进程切换、进程调度的关联是什么？它是怎么描述进程地址空间的？</strong><br>
+答：</p>
+<ul>
+<li><strong>作用</strong>：记录进程状态信息，是进程存在的唯一标志，包含进程标识、状态、优先级、程序计数器、寄存器值、内存信息等。</li>
+<li><strong>与控制操作关联</strong>：创建进程时分配 PCB 并初始化；撤销时回收 PCB 及资源；阻塞/唤醒时修改 PCB 状态字段。</li>
+<li><strong>与切换关联</strong>：进程切换时保存当前进程寄存器等上下文信息到 PCB，并从下一个进程 PCB 恢复上下文；PCB 是上下文切换的核心数据结构。</li>
+<li><strong>与调度关联</strong>：调度器根据 PCB 中优先级、状态等信息决定调度顺序；PCB 中包含调度所需的时间片、优先级等信息。</li>
+<li><strong>描述地址空间</strong>：PCB 记录进程页表基址或段表基址；记录代码段、数据段、堆栈段等内存区域信息；维护虚拟地址到物理地址的映射关系。</li>
+</ul>
+</li>
+<li>
+<p><strong>操作系统对用户级线程和内核级线程的支持有什么不同点？各列举一个支持用户级线程和内核级线程的实例操作系统名字。</strong><br>
+答：</p>
+<ul>
+<li><strong>用户级线程</strong>：由用户空间线程库管理，内核不感知；切换开销小但一个线程阻塞会导致整个进程阻塞；无法利用多处理器。</li>
+<li><strong>内核级线程</strong>：由内核直接支持和管理；线程阻塞不影响其他线程；可利用多处理器；切换开销较大。</li>
+<li><strong>实例系统</strong>：支持用户级线程的系统：早期的 Solaris（Green Threads）；支持内核级线程的系统：Linux（NPTL）。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="四-关于进程调度-18-分">四、关于进程调度 (18 分) </h2>
+<ol>
+<li>
+<p><strong>应用哪一种进程调度算法会导致优先级反转（置）问题？请举例描述"优先级反转（置）"的现象。如何解决这一问题？</strong><br>
+答：优先级调度算法（尤其是抢占式优先级调度）会导致优先级反转问题。</p>
+<ul>
+<li><strong>现象</strong>：低优先级进程 L 持有某资源，高优先级进程 H 需要该资源而被阻塞，但中优先级进程 M 可以继续执行，间接导致 H &lt; M，违反原本优先级设计。</li>
+<li><strong>解决方法</strong>：
+<ul>
+<li>优先级继承（低优先级进程临时继承被阻塞的高优先级进程的优先级）</li>
+<li>优先级天花板（持有资源时提升到可能访问该资源的最高优先级）</li>
+<li>避免共享资源（使用无锁算法或复制资源）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>请叙述多级反馈队列调度算法的设计思想。说明这一定义如何处理 I/O 密集型和 CPU 密集型进程？是否会带来"饥饿"问题？如何解决？</strong><br>
+答：</p>
+<ul>
+<li><strong>设计思想</strong>：根据进程行为动态调整优先级；设置多个就绪队列，不同队列优先级和时间片不同；新进程先进入高优先级队列，用完时间片后降级；优先调度高优先级队列进程。</li>
+<li><strong>I/O vs CPU 密集型</strong>：I/O 密集型进程在 I/O 操作前往往用不完时间片即主动让出 CPU，下次调度时仍在高优先级队列；CPU 密集型进程会用完时间片被降级到低优先级队列，减少对系统的影响。</li>
+<li><strong>饥饿问题</strong>：高优先级队列任务过多时，低优先级队列任务可能长时间得不到执行。</li>
+<li><strong>解决方法</strong>：设置老化机制（等待时间超过阈值自动提升优先级）；定期将所有进程重新放入最高优先级队列；保证每个队列都有最小执行时间份额。</li>
+</ul>
+</li>
+</ol>
+<h1 id="2019-秋-期中">2019 秋-期中 </h1>
+<h2 id="一-关于系统调用与中断异常机制-10-分">一、关于系统调用与中断异常机制 (10 分) </h2>
+<ol>
+<li>
+<p><strong>系统调用在实现上依赖于硬件支持。请从 IA-32 硬件支持的角度，简要说明用户态程序执行系统调用的过程。</strong></p>
+<p>答：</p>
+<ul>
+<li>用户态程序通过软件中断（如 <code>int 0x80</code>）或快速系统调用指令（如 <code>sysenter</code>）进入内核态。</li>
+<li>CPU 检查调用指令的目标向量（IDT 表项），找到对应的中断门或系统调用门。</li>
+<li>CPU 自动完成权限检查（CPL ≤ DPL）、堆栈切换（SS:ESP → 内核栈），保存用户态现场（EIP、CS、EFLAGS 等）。</li>
+<li>控制权转移到内核态处理例程，读取系统调用号（如 EAX）、参数（如 EBX、ECX）。</li>
+<li>执行内核功能逻辑。</li>
+<li>执行 <code>iret</code> 或 <code>sysexit</code> 返回用户态，恢复用户态上下文。</li>
+</ul>
+</li>
+<li>
+<p><strong>简述系统调用与异常（如缺页异常）两者的异同点。</strong></p>
+<ul>
+<li>
+<p><strong>相同点</strong>：</p>
+<ul>
+<li>都会触发特权级切换，从用户态进入内核态；</li>
+<li>都通过中断/异常机制进入内核处理程序；</li>
+<li>都需要保存用户态现场，处理后再返回。</li>
+</ul>
+</li>
+<li>
+<p><strong>不同点</strong>：</p>
+<ul>
+<li>触发方式不同：系统调用是主动触发（指令），异常是被动触发（由错误或事件引发）；</li>
+<li>系统调用可由用户程序预期控制，异常不可预期；</li>
+<li>系统调用执行特定服务，异常则通常处理错误或特殊事件（如缺页异常引发页面调度）。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="二-关于进程管理与调度-12-分">二、关于进程管理与调度 (12 分) </h2>
+<ol>
+<li>
+<p><strong>简述进程控制块（PCB）的内容与作用。说明操作系统是如何通过 PCB 实现进程切换的？</strong></p>
+<p>答：</p>
+<ul>
+<li><strong>内容</strong>：进程标识符（PID）、进程状态、程序计数器、寄存器上下文、优先级、时间片、内存地址空间信息、打开的文件列表等。</li>
+<li><strong>作用</strong>：PCB 是操作系统调度和管理进程的核心数据结构。</li>
+<li><strong>进程切换流程</strong>：
+<ul>
+<li>当前运行进程执行完时间片或发生阻塞，保存其 CPU 上下文至 PCB；</li>
+<li>选择下一个就绪进程；</li>
+<li>从下一个进程的 PCB 中恢复上下文；</li>
+<li>更新状态并切换到新的进程执行。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>请简要说明何为抢占式调度？请说明其与非抢占式调度的区别。</strong></p>
+<p>答：</p>
+<ul>
+<li><strong>抢占式调度</strong>：当有更高优先级的进程进入就绪状态或当前进程时间片用尽时，操作系统可中断当前进程，将 CPU 分配给其他进程。</li>
+<li><strong>非抢占式调度</strong>：当前进程一直运行到阻塞、终止或主动让出 CPU，系统才进行调度。</li>
+<li><strong>区别</strong>：
+<ul>
+<li>抢占式响应更快，有利于实时性；</li>
+<li>非抢占式更简单，切换次数少，但可能导致低优先级进程饥饿。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="三-关于线程实现-10-分">三、关于线程实现 (10 分) </h2>
+<p><strong>比较用户级线程（User-Level Threads, ULT）和内核级线程（Kernel-Level Threads, KLT）的实现方式、优缺点和典型操作系统支持。</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>用户级线程 (ULT)</th>
+<th>内核级线程 (KLT)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>实现位置</td>
+<td>用户空间线程库</td>
+<td>内核空间</td>
+</tr>
+<tr>
+<td>切换效率</td>
+<td>高（不涉及系统调用）</td>
+<td>低（需要内核调度）</td>
+</tr>
+<tr>
+<td>阻塞影响</td>
+<td>一个线程阻塞 → 整个进程阻塞</td>
+<td>一个线程阻塞不影响其他线程</td>
+</tr>
+<tr>
+<td>多核支持</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>系统支持</td>
+<td>GNU Pthreads（部分实现）</td>
+<td>Linux (NPTL)、Windows</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="四-关于调度策略与饥饿问题-8-分">四、关于调度策略与饥饿问题 (8 分) </h2>
+<ol>
+<li>
+<p><strong>调度策略中常出现饥饿问题。请指出一种可能导致饥饿的调度策略，并说明其原理。</strong></p>
+<p>答：优先级调度策略可能导致饥饿问题。高优先级进程持续到达，低优先级进程一直得不到 CPU 资源，长期处于就绪队列而不被调度执行。</p>
+</li>
+<li>
+<p><strong>简述一种缓解饥饿问题的机制。</strong></p>
+<p>答：<strong>优先级老化机制（Priority Aging）</strong>：随着等待时间增加，进程的优先级逐渐提升，最终可以获得调度，避免无限期等待。</p>
+</li>
+</ol>
+<hr>
+<h2 id="五-简答题-10-分">五、简答题 (10 分) </h2>
+<p><strong>请比较系统调用接口与库函数接口的区别。</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>系统调用接口</th>
+<th>库函数接口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>执行层级</td>
+<td>内核态（需要切换）</td>
+<td>用户态</td>
+</tr>
+<tr>
+<td>开销</td>
+<td>高（需要陷入内核）</td>
+<td>低</td>
+</tr>
+<tr>
+<td>依赖</td>
+<td>操作系统提供</td>
+<td>编译器/标准库提供</td>
+</tr>
+<tr>
+<td>作用</td>
+<td>调用操作系统核心服务（如文件、进程管理）</td>
+<td>提供常用函数封装（如 <code>printf</code>、<code>malloc</code>）</td>
+</tr>
+<tr>
+<td>示例</td>
+<td><code>read()</code>, <code>write()</code></td>
+<td><code>printf()</code>, <code>strcpy()</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="2021-春-期中考试整理">2021 春-期中考试整理 </h1>
+<h2 id="一-环境和运行机制-系统调用-30-分">一、环境和运行机制、系统调用 (30 分) </h2>
+<h3 id="1-请列举五条需要在保护模式下运行的指令访管指令需要在保护模式下执行吗为什么10-分">1. 请列举五条需要在保护模式下运行的指令。"访管指令"需要在保护模式下执行吗？为什么？(10 分) </h3>
+<p>需要在保护模式下运行的指令：</p>
+<ul>
+<li><code>LGDT</code>（加载全局描述符表寄存器）</li>
+<li><code>LIDT</code>（加载中断描述符表寄存器）</li>
+<li><code>MOV CR0</code>（修改控制寄存器）</li>
+<li><code>CLI</code>（清中断标志）</li>
+<li><code>LTR</code>（加载任务寄存器）</li>
+</ul>
+<p><strong>访管指令必须在保护模式下执行</strong>。因为访管指令涉及特权级转换，需要保护模式提供的特权级机制来确保安全，实模式下无法提供这种保护。</p>
+<hr>
+<h3 id="2-描述从接收中断异常到中断处理程序运行结束的处理过程并指出哪些是硬件实现的哪些是操作系统实现的中断处理程序执行结束后需要执行哪一模块操作系统初始化和中断有什么关系10-分">2. 描述从接收中断/异常到中断处理程序运行结束的处理过程，并指出哪些是硬件实现的？哪些是操作系统实现的？中断处理程序执行结束后需要执行哪一模块？操作系统初始化和中断有什么关系？(10 分) </h3>
+<p>处理中断/异常的过程如下：</p>
+<ol>
+<li><strong>硬件</strong>保存当前上下文（保存标志寄存器、CS、IP 等）</li>
+<li><strong>硬件</strong>根据中断向量查找 IDT，获取中断处理程序入口地址</li>
+<li><strong>硬件</strong>切换到内核态，跳转到中断处理程序</li>
+<li><strong>操作系统</strong>保存其他现场（如寄存器等）</li>
+<li><strong>操作系统</strong>执行具体中断处理逻辑</li>
+<li><strong>操作系统</strong>恢复现场</li>
+<li><strong>硬件</strong>执行 <code>IRET</code> 指令，恢复标志寄存器、CS、IP 等，返回被中断的程序</li>
+</ol>
+<p>中断处理程序结束后，执行 <strong>中断返回例程</strong>。</p>
+<p>操作系统初始化时需要设置中断描述符表，初始化中断控制器，为系统提供中断处理的基础设施。</p>
+<hr>
+<h3 id="3-为了实现系统调用机制系统要做哪些工作10-分">3. 为了实现系统调用机制，系统要做哪些工作？(10 分) </h3>
+<p>实现系统调用机制需要：</p>
+<ol>
+<li>定义系统调用接口和编号</li>
+<li>实现用户态到内核态的特权级切换（通常通过软中断实现）</li>
+<li>提供系统调用表，将调用编号映射到对应的内核函数</li>
+<li>实现参数传递机制（通过寄存器或栈）</li>
+<li>实现返回值传递机制</li>
+<li>提供用户库封装系统调用（如 <code>libc</code>）</li>
+<li>实现权限检查和安全控制</li>
+</ol>
+<hr>
+<h2 id="二-进程线程模型-20-分">二、进程线程模型 (20 分) </h2>
+<h3 id="1-请画出五状态进程模型包括状态的名称以及转移条件10-分">1. 请画出五状态进程模型，包括状态的名称以及转移条件。(10 分) </h3>
+<p>五状态进程模型：</p>
+<ul>
+<li><strong>新建（New）</strong>：进程刚被创建</li>
+<li><strong>就绪（Ready）</strong>：等待 CPU 调度</li>
+<li><strong>运行（Running）</strong>：正在执行</li>
+<li><strong>阻塞（Blocked）</strong>：等待某事件发生</li>
+<li><strong>终止（Terminated）</strong>：执行完毕</li>
+</ul>
+<p>状态转移：</p>
+<ul>
+<li>新建 → 就绪：创建完成</li>
+<li>就绪 → 运行：调度器选择</li>
+<li>运行 → 阻塞：等待资源/I/O</li>
+<li>阻塞 → 就绪：事件发生</li>
+<li>运行 → 就绪：时间片用完或被抢占</li>
+<li>运行 → 终止：执行完毕或被终止</li>
+</ul>
+<hr>
+<h3 id="2-线程和进程有什么区别线程有什么属性为什么线程要有自己的栈线程的实现方式有哪些典型的操作系统采用哪种方式实现线程10-分">2. 线程和进程有什么区别？线程有什么属性？为什么线程要有自己的栈？线程的实现方式有哪些？典型的操作系统采用哪种方式实现线程？(10 分) </h3>
+<p><strong>区别：</strong></p>
+<ul>
+<li>进程是资源分配的基本单位；线程是 CPU 调度的基本单位</li>
+<li>同一进程内线程共享资源；进程间相互独立</li>
+<li>线程切换开销小于进程切换</li>
+<li>线程没有独立地址空间；进程有</li>
+</ul>
+<p><strong>线程的属性：</strong></p>
+<ul>
+<li>线程 ID</li>
+<li>程序计数器</li>
+<li>寄存器集合</li>
+<li>栈</li>
+<li>状态</li>
+<li>优先级</li>
+</ul>
+<p><strong>线程需要自己的栈</strong>，因为每个线程执行不同函数调用序列，需要独立的栈保存局部变量、返回地址、函数参数，保证函数调用的正确性。</p>
+<p><strong>实现方式：</strong></p>
+<ul>
+<li>用户级线程（在用户空间实现）</li>
+<li>内核级线程（在内核中实现）</li>
+<li>混合实现（结合两者）</li>
+</ul>
+<p><strong>典型操作系统</strong>（如 Linux、Windows）采用 <strong>内核级线程</strong>。</p>
+<hr>
+<h2 id="三-进程调度-25-分">三、进程调度 (25 分) </h2>
+<h3 id="1-三个进程-a-b-c-的调度分析a-b-为-cpu-密集运行时间-1000msc-为-io-密集每次执行-1ms-cpu10ms-io10-分">1. 三个进程 A、B、C 的调度分析。A、B 为 CPU 密集，运行时间 1000ms；C 为 I/O 密集，每次执行 1ms CPU，10ms I/O。(10 分) </h3>
+<h4 id="先来先服务fcfs">先来先服务（FCFS）： </h4>
+<p>顺序 A → B → C</p>
+<ul>
+<li>A：运行 1000ms</li>
+<li>B：运行 1000ms</li>
+<li>C：等待 2000ms 后开始运行</li>
+</ul>
+<p><strong>评价：</strong> C 响应性差，对 I/O 密集型进程不友好。</p>
+<hr>
+<h4 id="时间片轮转rr时间片-100ms">时间片轮转（RR），时间片 100ms： </h4>
+<ul>
+<li>A、B 轮流执行，每轮 100ms</li>
+<li>C 每轮获得 1ms 后进入 I/O</li>
+</ul>
+<p><strong>评价：</strong> 公平性好，C 响应性提升，A、B 总运行时间约 2000ms。</p>
+<hr>
+<h4 id="时间片轮转rr时间片-1ms">时间片轮转（RR），时间片 1ms： </h4>
+<ul>
+<li>A、B、C 每轮执行 1ms，频繁切换</li>
+</ul>
+<p><strong>评价：</strong> 切换开销大，但 C 响应性最佳。</p>
+<hr>
+<h4 id="srtn最短剩余时间优先">SRTN（最短剩余时间优先）： </h4>
+<ul>
+<li>C 因 CPU 使用短，总被优先执行</li>
+<li>I/O 时 A、B 执行</li>
+<li>A、B 可能饥饿</li>
+</ul>
+<p><strong>评价：</strong> C 响应性最强，A、B 长期无法完成。</p>
+<hr>
+<h3 id="2-请设计一个多级反馈队列调度算法并回答相关问题15-分">2. 请设计一个多级反馈队列调度算法并回答相关问题。(15 分) </h3>
+<p><strong>设计：</strong></p>
+<ul>
+<li>三个队列：Q0、Q1、Q2，优先级逐渐降低</li>
+<li>时间片：Q0 = 4ms，Q1 = 8ms，Q2 = 16ms</li>
+<li>新进程进入 Q0</li>
+<li>若未用完时间片被抢占 → 重新排队</li>
+<li>用完时间片 → 进入下一队列</li>
+<li>Q2 采用 FCFS</li>
+<li>每隔 100ms 所有进程重置回 Q0</li>
+</ul>
+<hr>
+<p><strong>(1) 是否抢占？为什么？</strong><br>
+是抢占式的。新进入高优先级队列的进程可抢占低优先级的，提高响应性。</p>
+<p><strong>(2) 更适合哪类进程？</strong><br>
+更友好于 I/O 密集型进程。因为它们通常在时间片用完前进入阻塞，返回后仍有高优先级。</p>
+<p><strong>(3) 等待 I/O 后时间片如何处理？</strong><br>
+返回时重进 Q0，重新获得最短时间片与最高优先级。</p>
+<p><strong>(4) 是否会造成饥饿？怎么解决？</strong><br>
+可能造成 CPU 密集型进程长期在低优先级等待。解决方法是<strong>定期提升其优先级</strong>（如每 100ms 回到 Q0）。</p>
+<hr>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
